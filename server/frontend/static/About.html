@@ -1,68 +1,220 @@
-<html>
-<head>
-  <!-- Link the style sheet here -->
-</head>
-<div>
-  <nav class="navbar navbar-expand-lg navbar-light" style="background-color:darkturquoise; height: 1in;">
-    <div class="container-fluid">
-      <h2 style="padding-right: 5%;">Dealerships</h2>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarText">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link" style="font-size: larger;" aria-current="page" href="/">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" style="font-size: larger;" href="/about">About Us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" style="font-size: larger;" href="/contact">Contact Us</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  
-    <div class="card" style="width: 80%;margin: auto; margin-top:5%;">
-      <div class="banner" name="about-header">
-      <!-- Insert header information here -->
-      </div>
-      <div style="display: flex;flex-direction: row; margin:auto">
-      <div class="card" style="width: 30%;">
-        <img class="card-img-top" src="/static/person.png" alt="Card image">
-        <div class="card-body">
-          <p class="title">Person1</p>
-          <p>Person1 Title</p>
-          <p class="card-text">Some text that explains the person1 in about 2 short sentences</p>
-          <p>person1@example.com</p>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - Premium Auto Dealerships</title>
+    <link rel="stylesheet" href="/static/style.css" />
+    <link rel="stylesheet" href="/static/bootstrap.min.css" />
+    <style>
+      .about-hero {
+        background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+        color: white;
+        padding: 60px 0;
+        text-align: center;
+        margin-bottom: 40px;
+      }
+      .about-hero h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+      }
+      .about-hero p {
+        font-size: 1.2rem;
+        max-width: 800px;
+        margin: 0 auto;
+        line-height: 1.8;
+      }
+      .team-section {
+        padding: 40px 20px;
+      }
+      .team-section h2 {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 50px;
+        color: #1e3c72;
+      }
+      .team-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      .team-card {
+        width: 320px;
+        border-radius: 15px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+        overflow: hidden;
+      }
+      .team-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+      }
+      .team-card img {
+        width: 100%;
+        height: 280px;
+        object-fit: cover;
+      }
+      .team-card .card-body {
+        padding: 25px;
+        background: #fff;
+      }
+      .team-card .name {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #1e3c72;
+        margin-bottom: 5px;
+      }
+      .team-card .role {
+        color: #2a5298;
+        font-weight: 500;
+        margin-bottom: 15px;
+        font-size: 1rem;
+      }
+      .team-card .bio {
+        color: #666;
+        line-height: 1.6;
+        margin-bottom: 15px;
+      }
+      .team-card .email {
+        color: #888;
+        font-size: 0.9rem;
+      }
+      nav {
+        background: linear-gradient(90deg, #1e3c72 0%, #2a5298 100%) !important;
+        height: auto !important;
+        padding: 15px 0 !important;
+      }
+      nav h2 {
+        color: white;
+      }
+      nav .nav-link {
+        color: rgba(255, 255, 255, 0.9) !important;
+        transition: color 0.3s ease;
+      }
+      nav .nav-link:hover,
+      nav .nav-link.active {
+        color: white !important;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container-fluid">
+        <h2 style="padding-right: 5%">Premium Auto Dealerships</h2>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarText"
+          aria-controls="navbarText"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                style="font-size: larger"
+                aria-current="page"
+                href="/"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" style="font-size: larger" href="/about"
+                >About Us</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" style="font-size: larger" href="/contact"
+                >Contact Us</a
+              >
+            </li>
+          </ul>
         </div>
       </div>
+    </nav>
 
-      <div class="card" style="width: 30%;">
-        <img class="card-img-top" src="/static/person.png" alt="Card image">
-        <div class="card-body">
-          <p class="title">Person2</p>
-          <p>Person2 Title</p>
-          <p class="card-text">Some text that explains the person2 in about 2 short sentences</p>
-          <p>person2@example.com</p>
+    <div class="about-hero">
+      <h1>About Premium Auto Dealerships</h1>
+      <p>
+        With over 25 years of excellence in the automotive industry, we've built
+        our reputation on trust, quality, and exceptional customer service. Our
+        extensive network of dealerships across North America offers an
+        unparalleled selection of both domestic and imported vehicles, carefully
+        curated to meet the diverse needs of our valued customers. From luxury
+        sedans to rugged SUVs, we're committed to helping you find the perfect
+        vehicle at competitive prices, backed by comprehensive warranties and
+        financing options.
+      </p>
+    </div>
+
+    <div class="team-section">
+      <h2>Meet Our Leadership Team</h2>
+      <div class="team-container">
+        <div class="card team-card">
+          <img
+            class="card-img-top"
+            src="/static/person.png"
+            alt="Sarah Mitchell"
+          />
+          <div class="card-body">
+            <p class="name">Sarah Mitchell</p>
+            <p class="role">Chief Executive Officer</p>
+            <p class="bio">
+              Sarah brings 15 years of automotive expertise and has led our
+              expansion across 12 states. Her vision drives our commitment to
+              sustainability and customer satisfaction.
+            </p>
+            <p class="email">s.mitchell@premiumauto.com</p>
+          </div>
+        </div>
+
+        <div class="card team-card">
+          <img
+            class="card-img-top"
+            src="/static/person.png"
+            alt="Marcus Rodriguez"
+          />
+          <div class="card-body">
+            <p class="name">Marcus Rodriguez</p>
+            <p class="role">Director of Operations</p>
+            <p class="bio">
+              Marcus oversees our daily operations and ensures every dealership
+              maintains our high standards. His operational excellence has
+              streamlined our nationwide network.
+            </p>
+            <p class="email">m.rodriguez@premiumauto.com</p>
+          </div>
+        </div>
+
+        <div class="card team-card">
+          <img
+            class="card-img-top"
+            src="/static/person.png"
+            alt="Jennifer Chen"
+          />
+          <div class="card-body">
+            <p class="name">Jennifer Chen</p>
+            <p class="role">Head of Customer Experience</p>
+            <p class="bio">
+              Jennifer champions our customer-first approach with innovative
+              programs that have earned us a 98% satisfaction rating. She's
+              passionate about creating memorable buying experiences.
+            </p>
+            <p class="email">j.chen@premiumauto.com</p>
+          </div>
         </div>
       </div>
-
-      <div class="card" style="width: 30%;">
-        <img class="card-img-top" src="/static/person.png" alt="Card image">
-        <div class="card-body">
-          <p class="title">Person3</p>
-          <p>Person3 Title</p>
-          <p class="card-text">Some text that explains the person3 in about 2 short sentences</p>
-          <p>person3@example.com</p>
-        </div>
-      </div>
     </div>
-    </div>
-    </div>
-    
-</div>
-
+  </body>
 </html>
