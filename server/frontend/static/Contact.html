@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - Premium Auto Dealerships</title>
+    <link rel="stylesheet" href="/static/style.css" />
+    <link rel="stylesheet" href="/static/bootstrap.min.css" />
+    <style>
+      .contact-hero {
+        background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+        color: white;
+        padding: 60px 0;
+        text-align: center;
+        margin-bottom: 50px;
+      }
+      .contact-hero h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+      }
+      .contact-hero p {
+        font-size: 1.2rem;
+        max-width: 700px;
+        margin: 0 auto;
+      }
+      .contact-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+      }
+      .contact-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        margin-bottom: 50px;
+      }
+      .contact-card {
+        background: white;
+        padding: 35px;
+        border-radius: 15px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+        text-align: center;
+      }
+      .contact-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+      }
+      .contact-card .icon {
+        font-size: 3rem;
+        color: #2a5298;
+        margin-bottom: 20px;
+      }
+      .contact-card h3 {
+        color: #1e3c72;
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+      }
+      .contact-card p {
+        color: #666;
+        line-height: 1.8;
+        margin-bottom: 10px;
+      }
+      .contact-card a {
+        color: #2a5298;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s ease;
+      }
+      .contact-card a:hover {
+        color: #1e3c72;
+      }
+      .map-section {
+        background: #f8f9fa;
+        padding: 50px 20px;
+        border-radius: 15px;
+        margin-top: 40px;
+      }
+      .map-section h2 {
+        text-align: center;
+        color: #1e3c72;
+        font-size: 2.5rem;
+        margin-bottom: 30px;
+      }
+      .locations-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px;
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+      .location-item {
+        background: white;
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+      }
+      .location-item h4 {
+        color: #1e3c72;
+        margin-bottom: 10px;
+        font-size: 1.3rem;
+      }
+      .location-item p {
+        color: #666;
+        margin-bottom: 5px;
+        line-height: 1.6;
+      }
+      nav {
+        background: linear-gradient(90deg, #1e3c72 0%, #2a5298 100%) !important;
+        height: auto !important;
+        padding: 15px 0 !important;
+      }
+      nav h2 {
+        color: white;
+      }
+      nav .nav-link {
+        color: rgba(255, 255, 255, 0.9) !important;
+        transition: color 0.3s ease;
+      }
+      nav .nav-link:hover,
+      nav .nav-link.active {
+        color: white !important;
+      }
+      .business-hours {
+        background: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+        margin-top: 30px;
+      }
+      .business-hours h3 {
+        color: #1e3c72;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+      .hours-table {
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+      }
+      .hours-row {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 0;
+        border-bottom: 1px solid #eee;
+      }
+      .hours-row:last-child {
+        border-bottom: none;
+      }
+      .day {
+        font-weight: 600;
+        color: #333;
+      }
+      .time {
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container-fluid">
+        <h2 style="padding-right: 5%">Premium Auto Dealerships</h2>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarText"
+          aria-controls="navbarText"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                style="font-size: larger"
+                aria-current="page"
+                href="/"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" style="font-size: larger" href="/about"
+                >About Us</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                style="font-size: larger"
+                href="/contact"
+                >Contact Us</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="contact-hero">
+      <h1>Get in Touch</h1>
+      <p>
+        We're here to help you find your dream car. Reach out to us through any
+        of the channels below and our team will respond promptly.
+      </p>
+    </div>
+
+    <div class="contact-container">
+      <div class="contact-grid">
+        <div class="contact-card">
+          <div class="icon">📞</div>
+          <h3>Call Us</h3>
+          <p>Speak directly with our sales team</p>
+          <p>
+            <strong>Sales:</strong>
+            <a href="tel:+18005551234">(800) 555-1234</a>
+          </p>
+          <p>
+            <strong>Service:</strong>
+            <a href="tel:+18005555678">(800) 555-5678</a>
+          </p>
+          <p>
+            <strong>Support:</strong>
+            <a href="tel:+18005559012">(800) 555-9012</a>
+          </p>
+        </div>
+
+        <div class="contact-card">
+          <div class="icon">✉️</div>
+          <h3>Email Us</h3>
+          <p>Send us a message anytime</p>
+          <p>
+            <strong>General Inquiries:</strong><br />
+            <a href="mailto:info@premiumauto.com">info@premiumauto.com</a>
+          </p>
+          <p>
+            <strong>Sales Department:</strong><br />
+            <a href="mailto:sales@premiumauto.com">sales@premiumauto.com</a>
+          </p>
+          <p>
+            <strong>Customer Support:</strong><br />
+            <a href="mailto:support@premiumauto.com">support@premiumauto.com</a>
+          </p>
+        </div>
+
+        <div class="contact-card">
+          <div class="icon">📍</div>
+          <h3>Visit Us</h3>
+          <p>Our headquarters location</p>
+          <p>
+            <strong>Premium Auto Headquarters</strong><br />
+            1500 Commerce Boulevard<br />
+            Suite 300<br />
+            Chicago, IL 60601
+          </p>
+          <a href="https://maps.google.com" target="_blank">Get Directions →</a>
+        </div>
+      </div>
+
+      <div class="business-hours">
+        <h3>Business Hours</h3>
+        <div class="hours-table">
+          <div class="hours-row">
+            <span class="day">Monday - Friday</span>
+            <span class="time">9:00 AM - 8:00 PM</span>
+          </div>
+          <div class="hours-row">
+            <span class="day">Saturday</span>
+            <span class="time">9:00 AM - 6:00 PM</span>
+          </div>
+          <div class="hours-row">
+            <span class="day">Sunday</span>
+            <span class="time">11:00 AM - 5:00 PM</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="map-section">
+        <h2>Our Dealership Locations</h2>
+        <div class="locations-grid">
+          <div class="location-item">
+            <h4>Chicago Downtown</h4>
+            <p>📍 1500 Commerce Blvd, Chicago, IL 60601</p>
+            <p>📞 (312) 555-0100</p>
+            <p>✉️ chicago@premiumauto.com</p>
+          </div>
+
+          <div class="location-item">
+            <h4>Los Angeles</h4>
+            <p>📍 8720 Sunset Boulevard, Los Angeles, CA 90069</p>
+            <p>📞 (310) 555-0200</p>
+            <p>✉️ losangeles@premiumauto.com</p>
+          </div>
+
+          <div class="location-item">
+            <h4>New York</h4>
+            <p>📍 425 Park Avenue, New York, NY 10022</p>
+            <p>📞 (212) 555-0300</p>
+            <p>✉️ newyork@premiumauto.com</p>
+          </div>
+
+          <div class="location-item">
+            <h4>Miami</h4>
+            <p>📍 2900 Biscayne Boulevard, Miami, FL 33137</p>
+            <p>📞 (305) 555-0400</p>
+            <p>✉️ miami@premiumauto.com</p>
+          </div>
+
+          <div class="location-item">
+            <h4>Dallas</h4>
+            <p>📍 5600 LBJ Freeway, Dallas, TX 75240</p>
+            <p>📞 (214) 555-0500</p>
+            <p>✉️ dallas@premiumauto.com</p>
+          </div>
+
+          <div class="location-item">
+            <h4>Seattle</h4>
+            <p>📍 1250 Elliott Avenue, Seattle, WA 98101</p>
+            <p>📞 (206) 555-0600</p>
+            <p>✉️ seattle@premiumauto.com</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
